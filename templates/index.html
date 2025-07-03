@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote for Captains</title>
+</head>
+<body>
+    <h1>Select Your Top 6 Captains</h1>
+    <form method="POST">
+        <label>Email: <input type="email" name="email" required></label><br><br>
+        {% for candidate in candidates %}
+            <label><input type="checkbox" name="captains" value="{{ candidate }}"> {{ candidate }}</label><br>
+        {% endfor %}
+        <br>
+        <button type="submit">Submit Vote</button>
+    </form>
+</body>
+</html>
